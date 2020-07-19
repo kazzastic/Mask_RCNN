@@ -72,13 +72,13 @@ def random_colors(N, bright=True):
 def apply_mask(image, mask, color, alpha=0.5):
     """Apply the given mask to the image.
     """
-    print("I am inside apply_mask, shape of image is", image.shape)
+    #print("I am inside apply_mask, shape of image is", image.shape)
     for c in range(3):
         image[:, :, c] = np.where(mask == 1,
                                   image[:, :, c] *
                                   (1 - alpha) + alpha * color[c] * 255,
                                   image[:, :, c])
-    print("I am still inside appy_mask and shape after process is ", image.shape)
+    #print("I am still inside appy_mask and shape after process is ", image.shape)
     return image
 
 
